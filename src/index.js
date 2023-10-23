@@ -1,12 +1,12 @@
 import _ from 'lodash';
 import myName from './myName';
-import './style.css'; //import resources so webpack can see it
-import Icon from './icon.jpg';
-import Data from './data.xml';
-import Notes from './data.csv';
-import toml from './data.toml';
-import yaml from './data.yaml';
-import json from './data.json5';
+import './css/style.css'; //import resources so webpack can see it
+import Icon from './assets/img/icon.jpg';
+import Data from './assets/data/data.xml';
+import Notes from './assets/data/data.csv';
+import toml from './assets/data/data.toml';
+import yaml from './assets/data/data.yaml';
+import json from './assets/data/data.json5';
 
 console.log(toml.title); // output `TOML Example`
 console.log(toml.owner.name); // output `Tom Preston-Werner`

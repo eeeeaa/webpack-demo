@@ -1,7 +1,9 @@
+//NOTE: require(...) is basically like import, but usually used in Node.js
 const path = require('path');
 const toml = require('toml');
 const yaml = require('yamljs');
 const json5 = require('json5');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 //NOTE: json is natively supported
 
 module.exports = {
@@ -55,4 +57,14 @@ module.exports = {
             },
         ],
     },
+    plugins: [
+        //this plugin automatically generates a html files in dist folder
+        new HtmlWebpackPlugin({ 
+            //use `title` if want a built-in template 
+            //or set custom template for generating html with `template`
+            template: './src/template.html',
+            filename: 'index.html',
+            inject: 'body',
+        }),
+    ],
 };
