@@ -11,6 +11,7 @@ module.exports = {
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
+        clean: true, //clean dist folder every time it build
     },
     module: { //chains of loaders, it runs in order from top to bottom
         rules: [
@@ -63,7 +64,7 @@ module.exports = {
             //use `title` if want a built-in template 
             //or set custom template for generating html with `template`
             //for more info: https://github.com/jantimon/html-webpack-plugin#options
-            
+
             template: './src/template.html',
             filename: 'index.html',
             inject: 'body',
