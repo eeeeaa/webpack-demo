@@ -62,6 +62,8 @@ module.exports = {
         new HtmlWebpackPlugin({ 
             //use `title` if want a built-in template 
             //or set custom template for generating html with `template`
+            //for more info: https://github.com/jantimon/html-webpack-plugin#options
+            
             template: './src/template.html',
             filename: 'index.html',
             inject: 'body',
