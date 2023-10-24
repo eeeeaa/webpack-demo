@@ -7,11 +7,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 //NOTE: json is natively supported
 
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        app: './src/index.js',
+    },
     output: {
-        filename: 'bundle.js',
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
-        clean: true, //clean dist folder every time it build
+        clean: true,
     },
     module: { //chains of loaders, it runs in order from top to bottom
         rules: [

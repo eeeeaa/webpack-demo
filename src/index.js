@@ -8,6 +8,10 @@ import toml from './assets/data/data.toml';
 import yaml from './assets/data/data.yaml';
 import json from './assets/data/data.json5';
 
+if (process.env.NODE_ENV !== 'production') {
+    console.log('Looks like we are in development mode!');
+  } 
+
 console.log(toml.title); // output `TOML Example`
 console.log(toml.owner.name); // output `Tom Preston-Werner`
 
